@@ -31,7 +31,7 @@ def add_obs(observation: requests.Response) -> None:
     :param observation: The `Response` from the TempestWx API.
     """
     pprint(observation.json())
-    with MongoClient(host="localhost", port=8081) as client:
+    with MongoClient(host="localhost", port=8081) as client: # type: MongoClient
         db = client.get_database("tempest")
         db.SanMarco.insert_one(observation.json())
 
