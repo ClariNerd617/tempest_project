@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tempest"
+version = "0.1.0"
+description = "Demonstration Project using Tempest API."
+authors = ["Goodwin, Henry (ClariNerd617) <HGoodwin617@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+pymongo = "^4.5.0"
+types-requests = "^2.31.0.3"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+flake8 = "^6.1.0"
+black = "^23.9.1"
+tryceratops = "^2.3.2"
+nox = "^2023.4.22"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
